@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Toggle de tema día/noche -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+      <span class="icon sun">☀️</span>
+      <span class="icon moon">🌙</span>
+    </button>
+
     <header class="hero">
       <img src="profilepic.jpg" alt="Retrato de Renato Alvarez Ortega" class="hero-photo" />
       <div class="hero-text">
@@ -92,6 +98,71 @@
         </div>
       </section>
 
+      <section class="projects-section">
+        <h2>Proyectos Destacados</h2>
+        <div class="projects-grid">
+          <!-- Proyecto Sistema de Agua -->
+          <div class="project-card">
+            <div class="project-gallery">
+              <div class="gallery-container" data-project="agua">
+                <img src="assets/agua.png" alt="Sistema de Gestión de Agua - Vista 1" class="gallery-image active">
+                <img src="assets/agua2.png" alt="Sistema de Gestión de Agua - Vista 2" class="gallery-image">
+                <img src="assets/agua3.png" alt="Sistema de Gestión de Agua - Vista 3" class="gallery-image">
+              </div>
+              <button class="gallery-btn prev" aria-label="Anterior">&#10094;</button>
+              <button class="gallery-btn next" aria-label="Siguiente">&#10095;</button>
+              <div class="gallery-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Sistema de Gestión de Agua</h3>
+              <p>Aplicación web para la gestión integral del servicio de agua potable, incluyendo facturación, control de consumo y gestión de clientes.</p>
+              <div class="project-tags">
+                <span class="badge">PHP</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto Sistema de Facturación -->
+          <div class="project-card">
+            <div class="project-gallery">
+              <div class="gallery-container" data-project="facturacion">
+                <img src="assets/facturacion.png" alt="Sistema de Facturación - Vista 1" class="gallery-image active">
+                <img src="assets/facturacion2.png" alt="Sistema de Facturación - Vista 2" class="gallery-image">
+              </div>
+              <button class="gallery-btn prev" aria-label="Anterior">&#10094;</button>
+              <button class="gallery-btn next" aria-label="Siguiente">&#10095;</button>
+              <div class="gallery-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Sistema de Facturación</h3>
+              <p>Plataforma de facturación electrónica con integración a SIFEN, gestión de inventario y reportes financieros en tiempo real.</p>
+              <div class="project-tags">
+                <span class="badge">Node.js</span>
+                <span class="badge">React</span>
+                <span class="badge">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal para ver imágenes en grande -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <button class="lightbox-btn prev" aria-label="Anterior">&#10094;</button>
+        <img src="" alt="Imagen ampliada" class="lightbox-image">
+        <button class="lightbox-btn next" aria-label="Siguiente">&#10095;</button>
+      </div>
+
       <section>
         <h2>Educación</h2>
         <div class="timeline">
@@ -141,18 +212,23 @@
           <div class="timeline-item">
             <strong>SIGESA · Desarrollador Full Stack</strong>
             <span>04/2021 – 05/2022</span>
-            <p>Desarrollo de Sistema ERP web y sus modulos principales, migracion de CRM a tecnologias WEB ,Integraciones con  CRM tercerizados , creación de Sistemas de mensajeria SMS y WhastApp .</p>
+            <p>Desarrollo de Sistema ERP web y sus modulos principales, migracion de CRM leagacy (Foxpro) a tecnologias WEB , Integraciones con  CRM tercerizados.</p>
+            <p>Creación de Sistemas de mensajeria SMS y WhastApp.</p>
 
           </div>
           <div class="timeline-item">
             <strong>SIGESA · Encargado Área de Desarrollo</strong>
             <span>06/2022 – 05/2024</span>
             <p>Coordinación del mantenimiento y mejora continua de sistemas CORE, ERP y CRM, alineando prioridades con áreas de negocio y asegurando entregas iterativas.</p>
+            <p>Coordinación en la implementacioón de servicios RPA para procesos de conciliación de pagos.</p>
+
           </div>
           <div class="timeline-item">
             <strong>SIGESA · Encargado Área Innovación</strong>
             <span>06/2024 – 2025</span>
             <p>Diseño de propuestas de valor basadas en nuevas tecnologías para optimizar procesos repetitivos, mejorar la comunicación con clientes y fomentar una cultura de innovación aplicada a proyectos estratégicos.</p>
+            <p>Diseño de  Agentes IA para automatizacion del flujo de cobranzas y consultas.</p>
+
           </div>
         </div>
       </section>
