@@ -20,8 +20,6 @@ jobs:
             --fail \
             --silent \
             --show-error
-        env:
-          EASYPANEL_DEPLOY_URL: ${{ secrets.EASYPANEL_DEPLOY_URL }}
       
       - name: Deploy exitoso
         run: echo "Despliegue a Easypanel iniciado correctamente"
