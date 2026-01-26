@@ -1,0 +1,27 @@
+# Workflow para desplegar automáticamente a Easypanel
+name: Deploy to Easypanel
+
+on:
+  # Se ejecuta en push a la rama main
+  push:
+    branches: ["main"]
+  
+  # Permite ejecutar manualmente desde la pestaña Actions
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Trigger Easypanel Deploy
+        run: |
+          curl -X POST "${{ secrets.EASYPANEL_DEPLOY_URL }}" \
+            --fail \
+            --silent \
+            --show-error
+        env:
+          EASYPANEL_DEPLOY_URL: ${{ secrets.EASYPANEL_DEPLOY_URL }}
+      
+      - name: Deploy exitoso
+        run: echo "Despliegue a Easypanel iniciado correctamente"
